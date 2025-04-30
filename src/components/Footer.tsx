@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Telegram } from "lucide-react";
+import { Instagram, Facebook, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -56,7 +56,7 @@ const Footer = () => {
               className="w-10 h-10 rounded-full bg-marina-pink/10 flex items-center justify-center text-slate-600 hover:bg-marina-pink/20 hover:text-marina-rose transition-colors"
               aria-label="Telegram"
             >
-              <Telegram size={20} />
+              <MessageCircle size={20} />
             </a>
           </div>
         </div>
