@@ -1,72 +1,79 @@
-import { Button } from "@/components/ui/button";
-import { Instagram, Facebook, Twitter, Youtube, Heart } from "lucide-react";
+import { Instagram, Facebook, Telegram } from "lucide-react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="border-t border-gray-200 py-12 bg-white">
+    <footer className="bg-white py-12 border-t border-marina-pink/10">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-10">
-          <div className="md:col-span-2">
-            <div className="text-xl font-medium text-slate-800 mb-4">
-              <span className="mr-1">✨</span> Анна Петрова
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <div className="text-xl font-medium text-slate-800 flex items-center justify-center md:justify-start mb-2">
+              <span className="text-marina-rose text-2xl mr-2">✿</span> 
+              <span className="font-serif">Марина Сафиуллина</span>
             </div>
-            <p className="text-slate-600 mb-6 max-w-md">
-              Профессиональный психолог, помогающий людям преодолевать жизненные трудности и
-              обретать внутреннюю гармонию.
+            <p className="text-slate-600 text-sm">
+              Психолог, член ОППЛ<br />
+              г. Пермь
             </p>
-            <div className="flex space-x-4">
-              <Button variant="outline" size="icon" className="rounded-full">
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full">
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full">
-                <Youtube className="h-4 w-4" />
-              </Button>
-            </div>
           </div>
           
-          <div>
-            <h3 className="font-medium text-slate-800 mb-4">Разделы</h3>
-            <nav className="flex flex-col space-y-3">
-              <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">
+          <div className="mb-6 md:mb-0">
+            <nav className="flex flex-wrap justify-center gap-6">
+              <a href="#about" className="text-slate-600 hover:text-marina-rose transition-colors">
                 Обо мне
               </a>
-              <a href="#services" className="text-slate-600 hover:text-slate-900 transition-colors">
+              <a href="#specialization" className="text-slate-600 hover:text-marina-rose transition-colors">
+                Специализация
+              </a>
+              <a href="#education" className="text-slate-600 hover:text-marina-rose transition-colors">
+                Образование
+              </a>
+              <a href="#pricing" className="text-slate-600 hover:text-marina-rose transition-colors">
                 Услуги
               </a>
-              <a href="#testimonials" className="text-slate-600 hover:text-slate-900 transition-colors">
-                Отзывы
-              </a>
-              <a href="#contact" className="text-slate-600 hover:text-slate-900 transition-colors">
+              <a href="#contact" className="text-slate-600 hover:text-marina-rose transition-colors">
                 Контакты
               </a>
             </nav>
           </div>
           
-          <div>
-            <h3 className="font-medium text-slate-800 mb-4">Контакты</h3>
-            <div className="space-y-3">
-              <p className="text-slate-600">+7 (999) 123-45-67</p>
-              <p className="text-slate-600">anna.petrova@example.com</p>
-              <p className="text-slate-600">г. Москва, ул. Психологов, д. 10</p>
-            </div>
+          <div className="flex space-x-4">
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-marina-pink/10 flex items-center justify-center text-slate-600 hover:bg-marina-pink/20 hover:text-marina-rose transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-marina-pink/10 flex items-center justify-center text-slate-600 hover:bg-marina-pink/20 hover:text-marina-rose transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook size={20} />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-marina-pink/10 flex items-center justify-center text-slate-600 hover:bg-marina-pink/20 hover:text-marina-rose transition-colors"
+              aria-label="Telegram"
+            >
+              <Telegram size={20} />
+            </a>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-600 text-sm">
-            © {currentYear} Анна Петрова. Все права защищены.
+        <div className="mt-8 pt-6 border-t border-marina-pink/10 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-slate-500 text-sm mb-4 md:mb-0">
+            © {new Date().getFullYear()} Марина Сафиуллина. Все права защищены.
           </p>
-          <p className="text-slate-600 text-sm flex items-center mt-4 md:mt-0">
-            Сделано с <Heart className="h-3 w-3 mx-1 text-red-400" /> для ваших клиентов
-          </p>
+          
+          <div className="flex space-x-6">
+            <a href="#" className="text-slate-500 text-sm hover:text-marina-rose transition-colors">
+              Политика конфиденциальности
+            </a>
+            <a href="#" className="text-slate-500 text-sm hover:text-marina-rose transition-colors">
+              Условия использования
+            </a>
+          </div>
         </div>
       </div>
     </footer>

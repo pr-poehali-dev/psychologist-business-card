@@ -1,78 +1,93 @@
-import { BadgeCheck, Activity, Heart, User, Briefcase, BatteryLow } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { AlertCircle, Users, BrainCircuit, Clock4, BriefcaseBusiness } from "lucide-react";
 
 const SpecializationSection = () => {
-  const specializations = [
-    {
-      title: "Тревога, стресс, страх",
-      description: "Помощь в преодолении тревожных состояний, стресса и различных страхов",
-      icon: <Activity className="w-5 h-5" />
-    },
-    {
-      title: "Одиночество, неуверенность в себе",
-      description: "Работа с низкой самооценкой и чувством неуверенности",
-      icon: <User className="w-5 h-5" />
-    },
-    {
-      title: "Проблемы с партнером",
-      description: "Недопонимание, измена, разрыв отношений, развод",
-      icon: <Heart className="w-5 h-5" />
-    },
-    {
-      title: "Прокрастинация, упадок сил",
-      description: "Помощь в поиске смысла жизни и преодолении апатии",
-      icon: <BatteryLow className="w-5 h-5" />
-    },
-    {
-      title: "Проблемы на работе",
-      description: "Выгорание, конфликты в коллективе, профессиональная реализация",
-      icon: <Briefcase className="w-5 h-5" />
-    }
-  ];
-
   return (
-    <section id="specialization" className="py-16 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-40 left-0 w-96 h-96 rounded-full bg-pastel-lavender/20 blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 right-10 w-80 h-80 rounded-full bg-pastel-sky/20 blur-3xl -z-10"></div>
-
+    <section id="specialization" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-light mb-6 text-primary-foreground">
-            Моя <span className="font-medium">специализация</span>
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            Моя специализация
           </h2>
-          <p className="text-muted-foreground">
-            Я специализируюсь на решении различных психологических проблем, которые мешают вам жить полноценной жизнью 
-            и достигать поставленных целей
+          <div className="w-20 h-1 bg-marina-rose mx-auto mb-6"></div>
+          <p className="text-lg text-slate-600">
+            Направления психологической помощи, в которых я работаю
           </p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specializations.map((item, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-pastel-pink/10 hover:shadow-md transition-shadow duration-300">
-              <div className="flex items-start gap-4">
-                <div className="rounded-full bg-primary/20 p-3 flex-shrink-0">
-                  {item.icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-primary-foreground flex gap-2 items-center">
-                    {item.title}
-                    <BadgeCheck className="w-4 h-4 text-primary-foreground" />
-                  </h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
-                </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-marina-pink/20 hover:shadow-md transition-shadow animate-fade-in" style={{animationDelay: "0ms"}}>
+            <div className="flex items-center mb-5">
+              <div className="w-12 h-12 bg-marina-pink/20 rounded-full flex items-center justify-center mr-4">
+                <AlertCircle className="text-marina-rose h-6 w-6" />
               </div>
+              <h3 className="text-xl font-bold text-slate-800">Тревога и стресс</h3>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-12 flex flex-wrap justify-center gap-2">
-          <Badge className="bg-pastel-pink/30 hover:bg-pastel-pink/40 text-primary-foreground border-none px-4 py-2 rounded-full">Депрессия</Badge>
-          <Badge className="bg-pastel-mint/30 hover:bg-pastel-mint/40 text-secondary-foreground border-none px-4 py-2 rounded-full">Панические атаки</Badge>
-          <Badge className="bg-pastel-lavender/30 hover:bg-pastel-lavender/40 text-primary-foreground border-none px-4 py-2 rounded-full">Личностный рост</Badge>
-          <Badge className="bg-pastel-peach/30 hover:bg-pastel-peach/40 text-primary-foreground border-none px-4 py-2 rounded-full">Детско-родительские отношения</Badge>
-          <Badge className="bg-pastel-sky/30 hover:bg-pastel-sky/40 text-secondary-foreground border-none px-4 py-2 rounded-full">Саморазвитие</Badge>
-          <Badge className="bg-pastel-pink/30 hover:bg-pastel-pink/40 text-primary-foreground border-none px-4 py-2 rounded-full">Эмоциональный интеллект</Badge>
+            <p className="text-slate-600">
+              Помощь при панических атаках, повышенной тревожности, фобиях и состояниях стресса. 
+              Работа с тревожными мыслями и страхами.
+            </p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-marina-pink/20 hover:shadow-md transition-shadow animate-fade-in" style={{animationDelay: "100ms"}}>
+            <div className="flex items-center mb-5">
+              <div className="w-12 h-12 bg-marina-pink/20 rounded-full flex items-center justify-center mr-4">
+                <Users className="text-marina-rose h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800">Отношения и одиночество</h3>
+            </div>
+            <p className="text-slate-600">
+              Работа с проблемами в отношениях, разрывами, конфликтами с партнером. 
+              Помощь при одиночестве, неуверенности в себе и низкой самооценке.
+            </p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-marina-pink/20 hover:shadow-md transition-shadow animate-fade-in" style={{animationDelay: "200ms"}}>
+            <div className="flex items-center mb-5">
+              <div className="w-12 h-12 bg-marina-pink/20 rounded-full flex items-center justify-center mr-4">
+                <BrainCircuit className="text-marina-rose h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800">Прокрастинация</h3>
+            </div>
+            <p className="text-slate-600">
+              Борьба с откладыванием дел, проблемами целеполагания, упадком сил и 
+              потерей смысла жизни. Поиск внутренней мотивации.
+            </p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-marina-pink/20 hover:shadow-md transition-shadow animate-fade-in" style={{animationDelay: "300ms"}}>
+            <div className="flex items-center mb-5">
+              <div className="w-12 h-12 bg-marina-pink/20 rounded-full flex items-center justify-center mr-4">
+                <BriefcaseBusiness className="text-marina-rose h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800">Проблемы на работе</h3>
+            </div>
+            <p className="text-slate-600">
+              Помощь при профессиональном выгорании, конфликтах в коллективе, 
+              стрессе на рабочем месте и адаптации к новым условиям.
+            </p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-marina-pink/20 hover:shadow-md transition-shadow animate-fade-in" style={{animationDelay: "400ms"}}>
+            <div className="flex items-center mb-5">
+              <div className="w-12 h-12 bg-marina-pink/20 rounded-full flex items-center justify-center mr-4">
+                <Clock4 className="text-marina-rose h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800">Жизненные кризисы</h3>
+            </div>
+            <p className="text-slate-600">
+              Поддержка в трудные периоды жизни, при изменениях, потерях и 
+              переживаниях экзистенциальных кризисов различных возрастов.
+            </p>
+          </div>
+          
+          <div className="p-6 rounded-xl border-2 border-dashed border-marina-pink/30 flex flex-col items-center justify-center text-center animate-fade-in" style={{animationDelay: "500ms"}}>
+            <p className="text-slate-600 mb-2">
+              Не нашли свою проблему в списке?
+            </p>
+            <p className="font-medium text-slate-800">
+              Свяжитесь со мной, и мы обсудим вашу ситуацию индивидуально
+            </p>
+          </div>
         </div>
       </div>
     </section>

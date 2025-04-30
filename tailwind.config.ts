@@ -68,6 +68,13 @@ export default {
 					mint: '#DCF2E9',
 					peach: '#FFE5D9',
 					sky: '#D9E4F5'
+				},
+				marina: {
+					light: '#F9F4F5',
+					pink: '#E8BBD0',
+					rose: '#D496B9',
+					lavender: '#E0D9F6',
+					mint: '#E1F0EC'
 				}
 			},
 			borderRadius: {
@@ -95,12 +102,17 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slide-in': {
+					'0%': { opacity: '0', transform: 'translateX(-20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out'
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-in': 'slide-in 0.6s ease-out'
 			}
 		}
 	},
