@@ -1,62 +1,66 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Smile, Star } from "lucide-react";
+import { Shield, Heart, Book } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 bg-secondary/30 relative">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-pastel-peach/30 rounded-bl-full opacity-40"></div>
-      
+    <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-light mb-6 text-primary-foreground">
-            Обо <span className="font-medium">мне</span>
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            Обо мне
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Я дипломированный и практикующий психолог со стажем работы более 4-х лет.
-            Являюсь членом общероссийской профессиональной психотерапевтической лиги (ОППЛ).
+          <p className="text-lg text-slate-600">
+            Помогаю людям преодолевать трудности и находить путь к счастливой жизни
           </p>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="bg-white/70 backdrop-blur-sm border-pastel-pink/20 shadow-sm">
-            <CardContent className="pt-6">
-              <div className="rounded-full bg-primary/20 w-12 h-12 flex items-center justify-center mb-4">
-                <Heart className="text-primary-foreground h-6 w-6" />
+        
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="md:w-2/5">
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" 
+                  alt="Психолог Анна Петрова" 
+                  className="w-full h-auto"
+                />
               </div>
-              <h3 className="text-xl font-medium mb-3 text-primary-foreground">Мой подход</h3>
-              <p className="text-muted-foreground">
-                Обратившись ко мне как к психологу, вы получите индивидуальный и профессиональный подход, 
-                поддержку и понимание в решении ваших проблем, а также новые инсайты и инструменты для работы над собой.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white/70 backdrop-blur-sm border-pastel-pink/20 shadow-sm">
-            <CardContent className="pt-6">
-              <div className="rounded-full bg-primary/20 w-12 h-12 flex items-center justify-center mb-4">
-                <Smile className="text-primary-foreground h-6 w-6" />
+              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-teal-100"></div>
+            </div>
+          </div>
+          
+          <div className="md:w-3/5">
+            <h3 className="text-2xl font-bold text-slate-800 mb-4">
+              Анна Петрова
+            </h3>
+            <p className="text-slate-600 mb-6">
+              Дипломированный психолог с опытом работы более 5 лет. Специализируюсь на когнитивно-поведенческой 
+              терапии и помощи людям, переживающим стресс, тревогу, депрессию и сложности в отношениях.
+            </p>
+            <p className="text-slate-600 mb-8">
+              Мой подход основан на создании доверительных отношений, где каждый клиент чувствует себя 
+              услышанным и понятым. Я верю, что внутри каждого человека есть ресурсы для преодоления 
+              трудностей и достижения гармонии.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-teal-50 p-4 rounded-xl">
+                <Shield className="text-teal-600 mb-3 h-6 w-6" />
+                <h4 className="font-medium text-slate-800 mb-1">Профессионализм</h4>
+                <p className="text-sm text-slate-600">Высшее образование и постоянное повышение квалификации</p>
               </div>
-              <h3 className="text-xl font-medium mb-3 text-primary-foreground">Моя цель</h3>
-              <p className="text-muted-foreground">
-                Моя цель - помочь вам справиться с проблемами, обрести внутреннюю гармонию, уверенность и понять себя лучше.
-                Вместе мы найдем путь к решению ваших проблем и внутренних конфликтов.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white/70 backdrop-blur-sm border-pastel-pink/20 shadow-sm">
-            <CardContent className="pt-6">
-              <div className="rounded-full bg-primary/20 w-12 h-12 flex items-center justify-center mb-4">
-                <Star className="text-primary-foreground h-6 w-6" />
+              
+              <div className="bg-teal-50 p-4 rounded-xl">
+                <Heart className="text-teal-600 mb-3 h-6 w-6" />
+                <h4 className="font-medium text-slate-800 mb-1">Эмпатия</h4>
+                <p className="text-sm text-slate-600">Внимательное и чуткое отношение к каждому клиенту</p>
               </div>
-              <h3 className="text-xl font-medium mb-3 text-primary-foreground">Результат</h3>
-              <p className="text-muted-foreground">
-                Мы вместе найдем пути к решению ваших проблем, разберемся с внутренними конфликтами и 
-                вы сможете стать более счастливыми и успешными в разных сферах жизни.
-              </p>
-            </CardContent>
-          </Card>
+              
+              <div className="bg-teal-50 p-4 rounded-xl">
+                <Book className="text-teal-600 mb-3 h-6 w-6" />
+                <h4 className="font-medium text-slate-800 mb-1">Современные методики</h4>
+                <p className="text-sm text-slate-600">Применение эффективных научно обоснованных подходов</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

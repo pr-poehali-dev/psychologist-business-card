@@ -1,67 +1,39 @@
 import { Button } from "@/components/ui/button";
-import { CalendarCheck, Heart, MessageCircle } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="py-16 lg:py-24 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-pastel-lavender/30 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-pastel-mint/40 blur-3xl"></div>
-
+    <section className="py-16 md:py-24 bg-gradient-to-b from-teal-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Image */}
-          <div className="lg:w-5/12 flex justify-center lg:justify-start">
-            <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Марина Сафиуллина - психолог"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-md">
-                <Heart size={32} className="text-primary-foreground" />
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="lg:w-7/12 text-center lg:text-left">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 text-primary-foreground">
-              <span className="block font-medium mb-2">Марина Сафиуллина</span>
-              <span className="text-muted-foreground">практикующий психолог</span>
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 mb-10 md:mb-0">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4 leading-tight">
+              Обретите гармонию и баланс в своей жизни
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
-              Помогаю справиться с тревогой, стрессом, неуверенностью и решить проблемы в отношениях. 
-              Более 4 лет опыта и индивидуальный подход к каждому клиенту.
+            <p className="text-lg text-slate-600 mb-8 max-w-lg">
+              Профессиональная психологическая помощь для решения личных проблем, 
+              преодоления трудностей и достижения внутреннего благополучия.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button className="rounded-full h-12 px-8 gap-2">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button className="rounded-full px-8 py-6 text-base font-medium flex items-center gap-2">
                 <CalendarCheck size={20} />
                 <span>Записаться на консультацию</span>
               </Button>
-              <Button variant="outline" className="rounded-full h-12 px-8 gap-2 border-pastel-pink">
-                <MessageCircle size={20} />
-                <span>Связаться со мной</span>
+              <Button variant="outline" className="rounded-full px-8 py-6 text-base font-medium">
+                Узнать больше
               </Button>
             </div>
-            <div className="mt-10 text-muted-foreground flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-              <div className="flex flex-col items-center sm:items-start">
-                <span className="text-2xl font-medium text-primary-foreground">4+</span>
-                <span className="text-sm">лет опыта</span>
-              </div>
-              <div className="h-10 border-r border-pastel-pink/30 hidden sm:block"></div>
-              <div className="flex flex-col items-center sm:items-start">
-                <span className="text-2xl font-medium text-primary-foreground">100+</span>
-                <span className="text-sm">клиентов</span>
-              </div>
-              <div className="h-10 border-r border-pastel-pink/30 hidden sm:block"></div>
-              <div className="flex flex-col items-center sm:items-start">
-                <span className="text-2xl font-medium text-primary-foreground">ОППЛ</span>
-                <span className="text-sm">член лиги</span>
-              </div>
+          </div>
+          <div className="md:w-1/2 relative">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" 
+                alt="Психолог слушает клиента" 
+                className="w-full h-auto"
+              />
             </div>
+            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-teal-200 rounded-full opacity-20 z-0"></div>
+            <div className="absolute -top-6 -left-6 w-48 h-48 bg-amber-200 rounded-full opacity-20 z-0"></div>
           </div>
         </div>
       </div>

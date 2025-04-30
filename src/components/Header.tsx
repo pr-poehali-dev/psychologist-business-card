@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X, CalendarCheck } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,27 +10,24 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white/90 backdrop-blur-sm py-4 border-b border-pastel-pink/30 sticky top-0 z-50">
+    <header className="bg-white/90 backdrop-blur-sm py-4 border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-xl font-medium text-primary-foreground">
-          <span className="mr-1">👩‍⚕️</span> Марина Сафиуллина
+        <div className="text-xl font-medium text-slate-800">
+          <span className="mr-1">✨</span> Анна Петрова
         </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a href="#about" className="text-muted-foreground hover:text-primary-foreground transition-colors">
+          <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">
             Обо мне
           </a>
-          <a href="#specialization" className="text-muted-foreground hover:text-primary-foreground transition-colors">
-            Специализация
-          </a>
-          <a href="#education" className="text-muted-foreground hover:text-primary-foreground transition-colors">
-            Образование
-          </a>
-          <a href="#pricing" className="text-muted-foreground hover:text-primary-foreground transition-colors">
+          <a href="#services" className="text-slate-600 hover:text-slate-900 transition-colors">
             Услуги
           </a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary-foreground transition-colors">
+          <a href="#testimonials" className="text-slate-600 hover:text-slate-900 transition-colors">
+            Отзывы
+          </a>
+          <a href="#contact" className="text-slate-600 hover:text-slate-900 transition-colors">
             Контакты
           </a>
         </nav>
@@ -45,7 +41,7 @@ const Header = () => {
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-slate-800"
           onClick={toggleMenu}
           aria-label="Меню"
         >
@@ -55,39 +51,32 @@ const Header = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white py-4 px-4 border-t border-pastel-pink/30 animate-fade-in">
+        <div className="md:hidden bg-white py-4 px-4 border-t border-gray-100 animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <a 
               href="#about" 
-              className="text-muted-foreground hover:text-primary-foreground transition-colors"
+              className="text-slate-600 hover:text-slate-900 transition-colors"
               onClick={toggleMenu}
             >
               Обо мне
             </a>
             <a 
-              href="#specialization" 
-              className="text-muted-foreground hover:text-primary-foreground transition-colors"
-              onClick={toggleMenu}
-            >
-              Специализация
-            </a>
-            <a 
-              href="#education" 
-              className="text-muted-foreground hover:text-primary-foreground transition-colors"
-              onClick={toggleMenu}
-            >
-              Образование
-            </a>
-            <a 
-              href="#pricing" 
-              className="text-muted-foreground hover:text-primary-foreground transition-colors"
+              href="#services" 
+              className="text-slate-600 hover:text-slate-900 transition-colors"
               onClick={toggleMenu}
             >
               Услуги
             </a>
             <a 
+              href="#testimonials" 
+              className="text-slate-600 hover:text-slate-900 transition-colors"
+              onClick={toggleMenu}
+            >
+              Отзывы
+            </a>
+            <a 
               href="#contact" 
-              className="text-muted-foreground hover:text-primary-foreground transition-colors"
+              className="text-slate-600 hover:text-slate-900 transition-colors"
               onClick={toggleMenu}
             >
               Контакты
